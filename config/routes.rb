@@ -1,6 +1,7 @@
 UcpAuth::Application.routes.draw do
     devise_for :users
-    resources :nfc, only: :index 
+    resources :presences, only: :index
+    get '/presences/:id', to: 'presences#scan'
     namespace :api do
         resources :users, except: [:create] do 
             collection do
