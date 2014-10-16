@@ -5,11 +5,12 @@ gem 'rails', '4.0.3'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
-gem 'pg'
 gem 'devise'
 gem "rolify"
 gem 'cancan'
 gem 'puma'
+gem 'execjs'
+gem 'therubyracer'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
