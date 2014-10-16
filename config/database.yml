@@ -11,14 +11,15 @@
 development:
   adapter: mysql2
   encoding: utf8
+  reconnect: false
   database: ucp_auth
-  pool: 5
-  username: root
-  password: rdev
-  socket: /tmp/mysql.sock
+  username: ucp
+  password: mqpxgbrx,
 
 production:
- adapter: postgresql
- database: ucp_auth
- pool: 5
- timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: ucp_auth
+  username: ucp
+  password: mqpxgbrx,
