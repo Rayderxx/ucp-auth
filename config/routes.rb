@@ -15,12 +15,14 @@ UcpAuth::Application.routes.draw do
             collection do
                 get 'signed_in'
                 get 'is_admin'
+                post 'create_user'
             end
         end
 
         resources :events, only: :index
         namespace :admin do
             resources :users
+            resources :events
         end
     end
   # The priority is based upon order of creation: first created -> highest priority.
