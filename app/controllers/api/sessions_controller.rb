@@ -3,7 +3,7 @@ class Api::SessionsController < Api::ApiController
         @user = User.find_for_database_authentication(email: params['email'])
         if @user && @user.valid_password?(params['password'])
             sign_in @user
-            render json: @user
+            render json: @user, :root => 'user'
         else
             render json: {
                 errors: "wrong login"
