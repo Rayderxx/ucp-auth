@@ -23,6 +23,11 @@ UcpAuth::Application.routes.draw do
         namespace :admin do
             resources :users
             resources :events
+            resources :presences do
+                collection do
+                    post 'is_present'
+                end
+            end
         end
     end
   # The priority is based upon order of creation: first created -> highest priority.

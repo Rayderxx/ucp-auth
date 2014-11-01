@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'active_model_serializers' 
+gem 'active_model_serializers', '~> 0.8.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'simple_token_authentication'
@@ -50,3 +50,4 @@ end
 gem 'debugger', group: [:development, :test]
 
 gem 'rack-cors', :require => 'rack/cors'
+
