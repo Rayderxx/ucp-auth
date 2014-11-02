@@ -22,7 +22,11 @@ UcpAuth::Application.routes.draw do
         resources :events, only: :index
         namespace :admin do
             resources :users
-            resources :events
+            resources :events do
+                collection do
+                    post 'destroy_event'
+                end
+            end
             resources :presences do
                 collection do
                     post 'is_present'
