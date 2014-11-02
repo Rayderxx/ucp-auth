@@ -30,6 +30,7 @@ UcpAuth::Application.routes.draw do
             resources :presences do
                 collection do
                     post 'is_present'
+                    post 'change_present'
                 end
             end
         end
