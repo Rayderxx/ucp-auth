@@ -1,11 +1,12 @@
 class PresencesController < ApplicationController
     def scan
-        u = User.where(ine_student: params[:id]).first
-        if u
-            render json: true
-        else
+        student = Student.find(params[:id])
+        event = student.recent_promotion.events.available_events.first
+        if event.nil? || student.already_sign(event)
             render json: false
+        else
+            student.store_sign(event)
+            render json: true
         end
-
     end
 end
