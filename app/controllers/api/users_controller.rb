@@ -25,13 +25,17 @@ class Api::UsersController < Api::ApiController
     end
 
     def update_profile
+        unless current_user.information.nil?
+            i = Information.find(current_user.information.id)
+            i.destroy
+        end
         current_user.update_attributes(params_user)
         render json: current_user
     end
 
     private
         def params_user
-            params.require(:user).permit(:email, information_attributes: [:description, :phone, :facebook, :twitter, :linkdnl])
+            params.require(:user).permit(:email, information_attributes: [:id, :user_id, :description, :phone, :facebook, :twitter, :linkedin])
         end
 
 end
