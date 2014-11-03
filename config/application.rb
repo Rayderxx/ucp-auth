@@ -15,6 +15,7 @@ module UcpAuth
           :methods => [:get, :post, :put, :delete, :options]
       end
     end
+    config.time_zone = 'Paris'
     config.active_record.default_timezone = :local
   end
 end

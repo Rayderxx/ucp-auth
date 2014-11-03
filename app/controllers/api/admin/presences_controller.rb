@@ -1,7 +1,7 @@
 class Api::Admin::PresencesController < Api::Admin::AdminController
     
     def index
-        render json: current_user.events.available_events, serialize: "EventSerializer", root: false
+        render json: Event.where(admin: current_user).available_events, serialize: "EventSerializer", root: false
     end
 
     def is_present

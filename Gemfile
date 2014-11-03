@@ -50,4 +50,5 @@ end
 #gem 'debugger', group: [:development, :test]
 
 gem 'rack-cors', :require => 'rack/cors'
+#gem "chronic"
 

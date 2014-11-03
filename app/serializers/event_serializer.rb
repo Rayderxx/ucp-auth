@@ -8,7 +8,7 @@ class EventSerializer < ActiveModel::Serializer
     end
 
     def date_start
-        object.date_start.strftime("%d/%M/%Y de %H:%M:%S")
+        object.date_start.strftime("%d/%m/%Y de %H:%M:%S")
     end
 
     def date_end

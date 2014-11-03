@@ -1,7 +1,7 @@
 class PresencesController < ApplicationController
     def scan
         student = Student.find(params[:id])
-        event = student.recent_promotion.events.available_events.first
+        event = student.recent_promotion.events.available_events
         if event.nil? || student.already_sign(event)
             render json: false
         else
